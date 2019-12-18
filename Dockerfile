@@ -10,7 +10,7 @@ RUN sed -s -i -e "s/80/8080/" /etc/apache2/ports.conf /etc/apache2/sites-availab
     sed -s -i -e "s/443/8443/" /etc/apache2/ports.conf /etc/apache2/sites-available/default-ssl.conf && \
     cp -R /etc/apache2 /tmp && \
     useradd -m -u 2001 -s /bin/bash apache && \
-    chown -R apache:apache /var/www/html /etc/apache2 /var/log/apache2
+    chown -R apache:apache /var/www/html /etc/apache2 /var/log/apache2 /var/lib/apache2
 
 USER apache
 VOLUME /var/www/html
